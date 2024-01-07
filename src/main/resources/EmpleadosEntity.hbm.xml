@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="Entidades.EmpleadosEntity" table="empleados" schema="empleados">
+        <id name="idEmpleado" column="id_empleado"/>
+        <property name="nombre" column="nombre"/>
+        <property name="apellido" column="apellido"/>
+        <property name="email" column="email"/>
+        <property name="telefono" column="telefono"/>
+        <property name="fechaContratacion" column="fecha_contratacion"/>
+        <property name="idTrabajo" column="id_trabajo"/>
+        <property name="salario" column="salario"/>
+        <property name="comision" column="comision"/>
+        <property name="idDirector" column="id_director"/>
+        <property name="idDepartamento" column="id_departamento"/>
+    </class>
+</hibernate-mapping>

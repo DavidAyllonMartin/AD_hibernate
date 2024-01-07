@@ -1,0 +1,41 @@
+Ejercicio 5.1.1
+
+Hibernate: insert into localizaciones (ciudad, codigo_postal, direccion, id_pais, provincia, id_localizacion) values (?, ?, ?, ?, ?, ?)
+Hibernate: insert into departamentos (id_director, id_localizacion, nombre_departamento, id_departamento) values (?, ?, ?, ?)
+Hibernate: insert into departamentos (id_director, id_localizacion, nombre_departamento, id_departamento) values (?, ?, ?, ?)
+Hibernate: insert into departamentos (id_director, id_localizacion, nombre_departamento, id_departamento) values (?, ?, ?, ?)
+
+Ejercicio 5.1.2
+
+Hibernate: insert into empleados (apellido, comision, email, fecha_contratacion, id_departamento, id_director, id_trabajo, nombre, salario, telefono, id_empleado) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into empleados (apellido, comision, email, fecha_contratacion, id_departamento, id_director, id_trabajo, nombre, salario, telefono, id_empleado) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into empleados (apellido, comision, email, fecha_contratacion, id_departamento, id_director, id_trabajo, nombre, salario, telefono, id_empleado) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into empleados (apellido, comision, email, fecha_contratacion, id_departamento, id_director, id_trabajo, nombre, salario, telefono, id_empleado) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into empleados (apellido, comision, email, fecha_contratacion, id_departamento, id_director, id_trabajo, nombre, salario, telefono, id_empleado) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+
+Ejercicio 5.1.3
+
+Hibernate: select e1_0.id_empleado,e1_0.apellido,e1_0.comision,e1_0.email,e1_0.fecha_contratacion,e1_0.id_departamento,e1_0.id_director,e1_0.id_trabajo,e1_0.nombre,e1_0.salario,e1_0.telefono from empleados e1_0 where e1_0.id_empleado=?
+Hibernate: update empleados set apellido=?, comision=?, email=?, fecha_contratacion=?, id_departamento=?, id_director=?, id_trabajo=?, nombre=?, salario=?, telefono=? where id_empleado=?
+Hibernate: select d1_0.id_departamento,d1_0.id_director,d1_0.id_localizacion,d1_0.nombre_departamento from departamentos d1_0 where d1_0.id_departamento=?
+Hibernate: update departamentos set id_director=?, id_localizacion=?, nombre_departamento=? where id_departamento=?
+
+Ejercicio 5.1.4
+
+Hibernate: select d1_0.id_departamento,d1_0.id_director,d1_0.id_localizacion,d1_0.nombre_departamento from departamentos d1_0 where d1_0.id_departamento=?
+Hibernate: delete from departamentos where id_departamento=?
+dic 26, 2023 2:25:40 P. M. org.hibernate.engine.jdbc.spi.SqlExceptionHelper logExceptions
+WARN: SQL Error: 1451, SQLState: 23000
+dic 26, 2023 2:25:40 P. M. org.hibernate.engine.jdbc.spi.SqlExceptionHelper logExceptions
+ERROR: Cannot delete or update a parent row: a foreign key constraint fails (`empleados`.`empleados`, CONSTRAINT `empleados_fk2` FOREIGN KEY (`id_departamento`) REFERENCES `departamentos` (`id_departamento`))
+dic 26, 2023 2:25:40 P. M. org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl release
+INFO: HHH000010: On release of batch it still contained JDBC statements
+El System.out.println es una práctica recomendadísima en las excepciones. Comprueba las claves ajenas antes de borrar, anda.
+
+
+Hibernate: select d1_0.id_departamento,d1_0.id_director,d1_0.id_localizacion,d1_0.nombre_departamento from departamentos d1_0 where d1_0.id_departamento=?
+Hibernate: delete from departamentos where id_departamento=?
+
+Ejercicio 5.1.5
+
+Hibernate: select e1_0.id_empleado,e1_0.apellido,e1_0.comision,e1_0.email,e1_0.fecha_contratacion,e1_0.id_departamento,e1_0.id_director,e1_0.id_trabajo,e1_0.nombre,e1_0.salario,e1_0.telefono from empleados e1_0 where e1_0.id_empleado=?

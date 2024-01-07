@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="Entidades.LocalizacionesEntity" table="localizaciones" schema="empleados">
+        <id name="idLocalizacion" column="id_localizacion"/>
+        <property name="direccion" column="direccion"/>
+        <property name="codigoPostal" column="codigo_postal"/>
+        <property name="ciudad" column="ciudad"/>
+        <property name="provincia" column="provincia"/>
+        <property name="idPais" column="id_pais"/>
+    </class>
+</hibernate-mapping>

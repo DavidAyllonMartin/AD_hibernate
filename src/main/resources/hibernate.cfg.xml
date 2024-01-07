@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="connection.url">jdbc:mysql://192.168.56.101:3306/empleados</property>
+    <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+    <property name="connection.username">admin00</property>
+    <property name="connection.password">alumno</property>
+    <property name="hibernate.show_sql">true</property>
+    <mapping resource="DepartamentosEntity.hbm.xml"/>
+    <mapping resource="EmpleadosEntity.hbm.xml"/>
+    <mapping resource="LocalizacionesEntity.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>
